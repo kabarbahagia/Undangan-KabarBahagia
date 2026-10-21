@@ -825,6 +825,23 @@
             var s=img.getAttribute('src');
             if(s&&photoMap[s])img.setAttribute('src',photoMap[s]);
           });
+          /* foto yang dirujuk lewat CSS url(...) — mis. foto latar cover Paper & Promise:
+             substitusi <img> tidak menjangkaunya, jadi samakan slotnya dari photoMap juga */
+          var cssPhotoSwap=function(css){
+            Object.keys(photoMap).forEach(function(k){
+              var v=photoMap[k];if(!v)return;
+              css=css.split('url("'+k+'")').join('url("'+v+'")')
+                     .split("url('"+k+"')").join('url("'+v+'")')
+                     .split('url('+k+')').join('url("'+v+'")');
+            });
+            return css;
+          };
+          doc.querySelectorAll('style').forEach(function(st){
+            var t=st.textContent;if(!t)return;var out=cssPhotoSwap(t);if(out!==t)st.textContent=out;
+          });
+          doc.querySelectorAll('[style]').forEach(function(el){
+            var s=el.getAttribute('style');if(!s)return;var out=cssPhotoSwap(s);if(out!==s)el.setAttribute('style',out);
+          });
           if(galleryData.length){
             var gimgs=[].slice.call(doc.querySelectorAll('.gal img,.gal-stage img'));
             gimgs.forEach(function(img,i){img.setAttribute('src',galleryData[i%galleryData.length])});
@@ -879,6 +896,12 @@
           /* injeksi di akhir body */
           var inject='';
           if(cfg.small)inject+='<script>try{var g=new URLSearchParams(location.search).get("to");if(g){var b=document.querySelector(".to b");if(b)b.textContent=g.slice(0,80)}}catch(e){}<\/script>';
+          /* tema berpola #openBtn (Elegan Gold, Rustic, Minimalis, Floral Sage): kunci scroll demo
+             dilepas skrip demo lewat timer — di sebagian webview/iframe timer itu tertahan sehingga
+             kunci tidak pernah lepas. Penjaga ini melepas kunci SEGERA saat tombol ditekan (sama
+             seperti tema 5–8 yang melepas class lock secara sinkron) lalu mengulanginya sesudahnya;
+             animasi geser cover tidak berubah. */
+          if(doc.querySelector('#openBtn'))inject+='<script>(function(){var b=document.getElementById("openBtn");if(!b)return;var u=function(){try{document.body.style.overflow="auto"}catch(e){}};b.addEventListener("click",u);b.addEventListener("click",function(){setTimeout(u,1300);setTimeout(u,2600)})})()<\/script>';
           if(waNum&&doc.querySelector('#f')){
             var head=encodeURIComponent('RSVP Pernikahan '+value('nameOne')+' & '+value('nameTwo'));
             inject+='<script>(function(){var f=document.getElementById("f");if(!f)return;f.addEventListener("submit",function(){var nm=(document.getElementById("nm")||{}).value||"";var ms=(document.getElementById("ms")||{}).value||"";var act=f.querySelector(".tg .act");var att=act?act.textContent.trim():"Hadir";var cnt=(document.getElementById("n")||{}).textContent||"1";var msg="'+head+'%0A%0ANama: "+encodeURIComponent(nm)+"%0AKehadiran: "+encodeURIComponent(att)+"%0AJumlah tamu: "+encodeURIComponent(cnt)+"%0AUcapan: "+encodeURIComponent(ms||"-");window.open("https://wa.me/'+waNum+'?text="+msg,"_blank","noopener")})})()<\/script>';
