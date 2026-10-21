@@ -896,12 +896,24 @@
           /* injeksi di akhir body */
           var inject='';
           if(cfg.small)inject+='<script>try{var g=new URLSearchParams(location.search).get("to");if(g){var b=document.querySelector(".to b");if(b)b.textContent=g.slice(0,80)}}catch(e){}<\/script>';
-          /* tema berpola #openBtn (Elegan Gold, Rustic, Minimalis, Floral Sage): kunci scroll demo
-             dilepas skrip demo lewat timer — di sebagian webview/iframe timer itu tertahan sehingga
-             kunci tidak pernah lepas. Penjaga ini melepas kunci SEGERA saat tombol ditekan (sama
-             seperti tema 5–8 yang melepas class lock secara sinkron) lalu mengulanginya sesudahnya;
-             animasi geser cover tidak berubah. */
-          if(doc.querySelector('#openBtn'))inject+='<script>(function(){var b=document.getElementById("openBtn");if(!b)return;var u=function(){try{document.body.style.overflow="auto"}catch(e){}};b.addEventListener("click",u);b.addEventListener("click",function(){setTimeout(u,1300);setTimeout(u,2600)})})()<\/script>';
+          /* tema berpola #openBtn (Elegan Gold, Rustic, Minimalis, Floral Sage): skrip demo melepas
+             kunci scroll DAN menyembunyikan #cover lewat satu timer ±1 detik. Di HP asli timer di
+             dalam iframe srcdoc bisa tertahan: gerbang terlihat terbuka (class .gone, opacity 0) dan
+             body memang ter-unlock, TAPI #cover yang tak kasat mata tetap position:fixed menutupi
+             seluruh layar dan menelan semua seretan sentuh (terverifikasi dengan CDP touch events:
+             elementFromPoint saat seret mengenai isi #cover, scrollY diam di 0 — membuka body saja
+             tidak cukup). Karena itu khusus pratinjau penjaga bekerja SINKRON saat tombol ditekan,
+             tanpa bergantung pada timer apa pun: kunci body dilepas (persis unlock demo) dan #cover langsung
+             pointer-events:none (animasi keluar cover tidak berubah); timer hanya membersihkan
+             display:none sesudahnya. File unduhan mempertahankan penjaga versi sebelumnya —
+             sebagai halaman mandiri timernya tidak tertahan dan perilakunya terbukti normal. */
+          if(doc.querySelector('#openBtn')){
+            if(mode==='preview'){
+              inject+='<script>(function(){var b=document.getElementById("openBtn");if(!b)return;var c=document.getElementById("cover");var u=function(){try{document.body.style.overflow="auto";if(c)c.style.pointerEvents="none"}catch(e){}};b.addEventListener("click",u);b.addEventListener("click",function(){setTimeout(function(){u();if(c)try{c.style.display="none"}catch(e){}},1350);setTimeout(u,2600)})})()<\/script>';
+            }else{
+              inject+='<script>(function(){var b=document.getElementById("openBtn");if(!b)return;var u=function(){try{document.body.style.overflow="auto"}catch(e){}};b.addEventListener("click",u);b.addEventListener("click",function(){setTimeout(u,1300);setTimeout(u,2600)})})()<\/script>';
+            }
+          }
           if(waNum&&doc.querySelector('#f')){
             var head=encodeURIComponent('RSVP Pernikahan '+value('nameOne')+' & '+value('nameTwo'));
             inject+='<script>(function(){var f=document.getElementById("f");if(!f)return;f.addEventListener("submit",function(){var nm=(document.getElementById("nm")||{}).value||"";var ms=(document.getElementById("ms")||{}).value||"";var act=f.querySelector(".tg .act");var att=act?act.textContent.trim():"Hadir";var cnt=(document.getElementById("n")||{}).textContent||"1";var msg="'+head+'%0A%0ANama: "+encodeURIComponent(nm)+"%0AKehadiran: "+encodeURIComponent(att)+"%0AJumlah tamu: "+encodeURIComponent(cnt)+"%0AUcapan: "+encodeURIComponent(ms||"-");window.open("https://wa.me/'+waNum+'?text="+msg,"_blank","noopener")})})()<\/script>';
