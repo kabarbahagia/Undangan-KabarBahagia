@@ -638,13 +638,13 @@
         },
         sinema:{file:'sinema-senja.html',label:'Sinema Senja',tz:'+07:00',tzLabel:'WIB',iso:'2027-08-14T08:00:00+07:00',storyStyle:'abbr',
           pairs:[
-            ['#KiranaMenemukanGalih','hashtag'],['K·G','mono'],
-            ['Kirana Maheswari, S.Pd.','full1'],['Galih Pradana, S.T.','full2'],
-            ['Kirana Maheswari','full1'],['Galih Pradana','full2'],
-            ['Putri pertama dari','label1'],['Bapak Bambang Sutrisno & Ibu Ratna Juwita','parents1'],
-            ['Putra kedua dari','label2'],['Bapak Agus Pramudya & Ibu Sri Wahyuni','parents2'],
+            ['#WeningPanduBahagia','hashtag'],['W·P','mono'],
+            ['Wening Larasati, S.E.','full1'],['Pandu Atmojo, S.T.','full2'],
+            ['Wening Larasati','full1'],['Pandu Atmojo','full2'],
+            ['Putri pertama dari','label1'],['Bapak Slamet Widodo & Ibu Sri Hartini','parents1'],
+            ['Putra kedua dari','label2'],['Bapak Joko Prasetyo & Ibu Endang Sulastri','parents2'],
             ['Sabtu, 14 Agustus 2027','dateLong'],['14 Agustus 2027','dateShort'],['14 · 08 · 2027','dots'],
-            ['Pendopo Kirana, Sleman','heroVenue'],['Pendopo Kirana','venue'],
+            ['Pendopo Wening, Sleman','heroVenue'],['Pendopo Wening','venue'],
             ['Jl. Kaliurang KM 9, Ngaglik, Sleman, Yogyakarta','addr'],
             ['Jl. Kaliurang KM 9, Sleman, Yogyakarta','addr'],
             ['Jl. Kaliurang KM 9, Ngaglik','addrNoCity'],
@@ -655,9 +655,9 @@
             ['Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami.','opening'],
             ['Kami akan berbahagia bila Bapak/Ibu berkenan mengenakan busana bernuansa ungu malam, emas sampanye, atau krem gading.','dresscode'],
             ['Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran serta doanya, kami mengucapkan terima kasih yang sebesar-besarnya.','closing'],
-            ['Kirana','short1'],['Galih','short2']
+            ['Wening','short1'],['Pandu','short2']
           ],
-          events:{date:'Sabtu, 14 Agustus 2027',range1:'08.00 – 10.00 WIB',range2:'11.00 – 13.00 WIB',venue:'Pendopo Kirana',addr:'Jl. Kaliurang KM 9, Sleman, Yogyakarta'},
+          events:{date:'Sabtu, 14 Agustus 2027',range1:'08.00 – 10.00 WIB',range2:'11.00 – 13.00 WIB',venue:'Pendopo Wening',addr:'Jl. Kaliurang KM 9, Sleman, Yogyakarta'},
           banks:[{name:'BCA',no:'1234567890'},{name:'Mandiri',no:'0987654321'}]
         },
         paper:{file:'paper-promise.html',label:'Surat Cinta',tz:'+07:00',tzLabel:'WIB',iso:'2027-05-22T08:00:00+07:00',storyStyle:'full',
@@ -893,7 +893,8 @@
             'mempelai-pria.jpg':photoTwoData||fb('mempelai-pria.jpg'),
             'pasangan-akad.jpg':galleryData[0]||timelinePhotos[0]||fb('pasangan-akad.jpg'),
             'pasangan-candid.jpg':galleryData[1]||timelinePhotos[1]||fb('pasangan-candid.jpg'),
-            'cincin-detail.jpg':galleryData[2]||timelinePhotos[2]||fb('cincin-detail.jpg')
+            'cincin-detail.jpg':galleryData[2]||timelinePhotos[2]||fb('cincin-detail.jpg'),
+            'kabarbahagia-logo.png':fb('kabarbahagia-logo.png')
           };
           doc.querySelectorAll('img').forEach(function(img){
             var s=img.getAttribute('src');
@@ -1075,7 +1076,7 @@
       form.addEventListener('input',function(){if(!fbIdManual){var slug=(value('nameOne')+'-'+value('nameTwo')).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');var dt=(value('eventDate')||'').replace(/[^0-9]/g,'');field('fbInvitationId').value=(slug&&slug!=='-'?slug:'undangan')+(dt?'-'+dt:'')}});
 
       /* ---- unduh ---- */
-      var ASSET_FILES=['pasangan-hero.jpg','pasangan-akad.jpg','pasangan-candid.jpg','cincin-detail.jpg','mempelai-pria.jpg','mempelai-wanita.jpg','musik-latar.mp3'];
+      var ASSET_FILES=['pasangan-hero.jpg','pasangan-akad.jpg','pasangan-candid.jpg','cincin-detail.jpg','mempelai-pria.jpg','mempelai-wanita.jpg','musik-latar.mp3','kabarbahagia-logo.png'];
       function downloadInvitation(){
         if(!value('nameOne')||!value('nameTwo')||!value('eventDate')){showToast('Lengkapi dua nama dan tanggal acara.');showStep(0);switchView('edit');return}
         showToast('Menyiapkan file undangan…');
