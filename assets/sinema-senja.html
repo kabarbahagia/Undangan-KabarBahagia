@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Kirana &amp; Galih — Sinema Senja</title>
+<title>Wening &amp; Pandu — Sinema Senja</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--night:#17121f;--night-deep:#100c16;--night-soft:#241b31;--gold:#d9b26a;--gold2:#eed49b;--champ:#f3e5c3;--rose:#c98a7d;--ivory:#f6f1e7;--paper:#fbf8f1;--ink:#2d2735;--ink-soft:#6f6577;
@@ -219,8 +219,7 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
 .close-photo{width:min(56vw,210px)}
 /* ---------- credit vendor ---------- */
 .credit{background:linear-gradient(180deg,var(--night),var(--night-deep));color:var(--champ);text-align:center;padding:32px 22px calc(30px + env(safe-area-inset-bottom,0px));position:relative;z-index:2;max-width:480px;margin:0 auto;border-top:2px solid var(--gold)}
-.credit .brand{font:600 1.7rem var(--serif);letter-spacing:.02em;color:#fff}
-.credit .brand i{font-family:var(--script);font-style:normal;font-weight:400;font-size:2rem;color:var(--gold2)}
+.credit .kb-logo{display:block;width:min(232px,72%);height:auto;margin:2px auto 4px}
 .credit p{font-family:var(--sans);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;opacity:.92;margin-top:5px;color:var(--champ)}
 .credit small{display:block;margin-top:8px;font-size:.85rem;opacity:.85}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.fu{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}.bfly{display:none!important}}
@@ -304,8 +303,8 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <span class="mote" style="left:82%;width:8px;height:8px;--t:17s;--dl:-9s;--dx:-18px"></span>
   <span class="mote" style="left:46%;width:4px;height:4px;--t:10s;--dl:-4s;--dx:8px"></span>
   <div class="cap-top cap" style="color:var(--gold2)">The Wedding Of</div>
-  <div class="mono"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>K·G</b></div>
-  <h1 class="names">Kirana<br><span class="amp">&amp;</span> Galih</h1>
+  <div class="mono"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>W·P</b></div>
+  <h1 class="names">Wening<br><span class="amp">&amp;</span> Pandu</h1>
   <div class="cap capd" style="border-top:1px solid rgba(238,212,155,.7);border-bottom:1px solid rgba(238,212,155,.7);padding:5px 16px;color:var(--gold2)">Sabtu, 14 Agustus 2027</div>
   <div class="to"><span class="cap" style="font-size:.62rem;color:var(--gold2)">Kepada Yth:</span><b id="guest">Bapak/Ibu/Saudara/i</b><small style="font-family:var(--sans);font-size:.68rem;opacity:.65">Mohon maaf bila ada kesalahan penulisan nama &amp; gelar</small></div>
   <button class="btn" id="open" type="button">Buka Undangan</button>
@@ -320,16 +319,16 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <span class="streak s-br"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#streak"/></svg></span>
   <span class="mote" style="left:18%;width:6px;height:6px;--t:13s;--dx:14px"></span>
   <span class="mote" style="left:74%;width:5px;height:5px;--t:16s;--dl:-7s;--dx:-14px"></span>
-  <div class="mono fu"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>K·G</b></div>
+  <div class="mono fu"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>W·P</b></div>
   <div class="cap fu" style="--d:.12s;color:var(--gold2)">The Wedding Of</div>
-  <h1 class="names fu" style="--d:.24s">Kirana<br><span class="amp">&amp;</span> Galih</h1>
+  <h1 class="names fu" style="--d:.24s">Wening<br><span class="amp">&amp;</span> Pandu</h1>
   <div class="divider fu" style="--d:.36s"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <div class="cap fu" style="--d:.44s;color:var(--gold2)">Sabtu, 14 Agustus 2027</div>
-  <p class="fu" style="--d:.52s;font-size:1.15rem">Pendopo Kirana, Sleman<br><span class="cap" style="font-size:.68rem;color:var(--gold2)">Yogyakarta</span></p>
+  <p class="fu" style="--d:.52s;font-size:1.15rem">Pendopo Senja, Sleman<br><span class="cap" style="font-size:.68rem;color:var(--gold2)">Yogyakarta</span></p>
   <div class="sw">GESER KE BAWAH ⌄</div>
 </section>
 
-<div class="marquee" aria-hidden="true"><div class="track"><span>Kirana ✦ Galih ✦ Save The Date ✦ 14 · 08 · 2027 ✦ Yogyakarta ✦&nbsp;</span><span>Kirana ✦ Galih ✦ Save The Date ✦ 14 · 08 · 2027 ✦ Yogyakarta ✦&nbsp;</span></div></div>
+<div class="marquee" aria-hidden="true"><div class="track"><span>Wening ✦ Pandu ✦ Save The Date ✦ 14 · 08 · 2027 ✦ Yogyakarta ✦&nbsp;</span><span>Wening ✦ Pandu ✦ Save The Date ✦ 14 · 08 · 2027 ✦ Yogyakarta ✦&nbsp;</span></div></div>
 
 <!-- AYAT -->
 <section class="sec l" id="ayat">
@@ -362,13 +361,13 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <h2 class="fu">Dua Hati, Satu Senja</h2>
   <div class="divider fu"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <p class="fu"><b>Assalamu'alaikum Warahmatullahi Wabarakatuh</b><br>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk hadir di hari bahagia kami.</p>
-  <div class="cframe oval fu" style="width:60%"><div class="ph"><img src="mempelai-wanita.jpg" alt="Foto model mempelai wanita bergaun putih — profil Kirana" loading="lazy" decoding="async"></div></div>
-  <h3 class="fu" style="font-size:1.75rem;color:var(--gold2)">Kirana Maheswari, S.Pd.</h3>
-  <div class="ortu fu"><span class="ortu-label">Putri pertama dari</span><b>Bapak Bambang Sutrisno &amp; Ibu Ratna Juwita</b></div>
+  <div class="cframe oval fu" style="width:60%"><div class="ph"><img src="mempelai-wanita.jpg" alt="Foto model mempelai wanita bergaun putih — profil Wening" loading="lazy" decoding="async"></div></div>
+  <h3 class="fu" style="font-size:1.75rem;color:var(--gold2)">Wening Larasati, S.E.</h3>
+  <div class="ortu fu"><span class="ortu-label">Putri pertama dari</span><b>Bapak Slamet Widodo &amp; Ibu Sri Hartini</b></div>
   <div class="amp fu">&amp;</div>
-  <div class="cframe oval fu" style="width:60%"><div class="ph"><img src="mempelai-pria.jpg" alt="Foto model mempelai pria berjas hitam — profil Galih" loading="lazy" decoding="async"></div></div>
-  <h3 class="fu" style="font-size:1.75rem;color:var(--gold2)">Galih Pradana, S.T.</h3>
-  <div class="ortu fu"><span class="ortu-label">Putra kedua dari</span><b>Bapak Agus Pramudya &amp; Ibu Sri Wahyuni</b></div>
+  <div class="cframe oval fu" style="width:60%"><div class="ph"><img src="mempelai-pria.jpg" alt="Foto model mempelai pria berjas hitam — profil Pandu" loading="lazy" decoding="async"></div></div>
+  <h3 class="fu" style="font-size:1.75rem;color:var(--gold2)">Pandu Atmojo, S.T.</h3>
+  <div class="ortu fu"><span class="ortu-label">Putra kedua dari</span><b>Bapak Joko Prasetyo &amp; Ibu Endang Sulastri</b></div>
 </section>
 
 <!-- COUNTDOWN -->
@@ -403,14 +402,14 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
     <h3>Akad Nikah</h3>
     <div class="cap" style="margin:8px 0;color:var(--gold2)">Sabtu, 14 Agustus 2027</div>
     <p style="font-size:1.1rem">08.00 – 10.00 WIB</p>
-    <p><b>Pendopo Kirana</b><br>Jl. Kaliurang KM 9, Sleman, Yogyakarta</p>
+    <p><b>Pendopo Senja</b><br>Jl. Kaliurang KM 9, Sleman, Yogyakarta</p>
   </div>
   <div class="event-card fu" style="--d:.15s">
     <div class="cico"><svg viewBox="0 0 48 48"><use href="#i-cake"/></svg></div>
     <h3>Resepsi</h3>
     <div class="cap" style="margin:8px 0;color:var(--gold2)">Sabtu, 14 Agustus 2027</div>
     <p style="font-size:1.1rem">11.00 – 13.00 WIB</p>
-    <p><b>Pendopo Kirana</b><br>Jl. Kaliurang KM 9, Sleman, Yogyakarta</p>
+    <p><b>Pendopo Senja</b><br>Jl. Kaliurang KM 9, Sleman, Yogyakarta</p>
   </div>
 </section>
 
@@ -422,7 +421,7 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <div class="divider fu"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <div class="event-card fu">
     <div class="cico"><svg viewBox="0 0 48 48"><use href="#i-pin"/></svg></div>
-    <h3 style="font-family:var(--serif);font-size:1.95rem;letter-spacing:.04em;color:var(--gold2)">Pendopo Kirana</h3>
+    <h3 style="font-family:var(--serif);font-size:1.95rem;letter-spacing:.04em;color:var(--gold2)">Pendopo Senja</h3>
     <p>Jl. Kaliurang KM 9, Ngaglik<br>Sleman, Daerah Istimewa Yogyakarta<br><span style="opacity:.7">Lokasi contoh untuk keperluan demo</span></p>
     <a class="btn" style="margin-top:12px" target="_blank" rel="noopener" href="https://maps.google.com/?q=Jalan+Kaliurang+KM+9+Sleman+Yogyakarta">Lihat Lokasi</a>
   </div>
@@ -439,10 +438,10 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <h2 class="fu">Kisah Kami</h2>
   <div class="divider fu"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <div class="tl">
-    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-hero.jpg" alt="Foto model pasangan pengantin — cerita perkenalan" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>OKT 2019</small><h3>Satu Senja di Malioboro</h3><p>Sama-sama berburu foto matahari terbenam, kami berebut satu sudut yang sama. Galih mengalah — dan sejak senja itu, obrolan kami tidak pernah benar-benar selesai.</p></div></div>
+    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-hero.jpg" alt="Foto model pasangan pengantin — cerita perkenalan" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>OKT 2019</small><h3>Satu Senja di Malioboro</h3><p>Sama-sama berburu foto matahari terbenam, kami berebut satu sudut yang sama. Pandu mengalah — dan sejak senja itu, obrolan kami tidak pernah benar-benar selesai.</p></div></div>
     <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-candid.jpg" alt="Foto model pasangan pengantin tertawa — cerita menjadi dekat" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>JUN 2021</small><h3>Dari Lensa ke Hati</h3><p>Bergabung di komunitas fotografi yang sama membuat kami sering pulang larut demi cahaya terakhir. Dari berbagi lensa, kami mulai berbagi cerita dan cita-cita.</p></div></div>
-    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-akad.jpg" alt="Foto model momen tukar cincin — cerita bertemu keluarga" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>DES 2025</small><h3>Bertemu Keluarga</h3><p>Galih datang bersilaturahmi ke rumah Kirana. Di ruang tamu yang hangat itu, kedua keluarga saling mengenal dan sama-sama menitipkan restu.</p></div></div>
-    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-hero.jpg" alt="Foto model pasangan pengantin — cerita lamaran" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>APR 2026</small><h3>Lamaran di Tepi Senja</h3><p>Di Pantai Parangtritis, tepat saat langit berubah jingga, Galih menyampaikan niat sucinya. Kirana mengangguk sambil menahan air mata bahagia.</p></div></div>
+    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-akad.jpg" alt="Foto model momen tukar cincin — cerita bertemu keluarga" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>DES 2025</small><h3>Bertemu Keluarga</h3><p>Pandu datang bersilaturahmi ke rumah Wening. Di ruang tamu yang hangat itu, kedua keluarga saling mengenal dan sama-sama menitipkan restu.</p></div></div>
+    <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-hero.jpg" alt="Foto model pasangan pengantin — cerita lamaran" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>APR 2026</small><h3>Lamaran di Tepi Senja</h3><p>Di Pantai Parangtritis, tepat saat langit berubah jingga, Pandu menyampaikan niat sucinya. Wening mengangguk sambil menahan air mata bahagia.</p></div></div>
     <div class="tl-item"><div class="cframe fu"><div class="ph"><img src="pasangan-candid.jpg" alt="Foto model pasangan pengantin tertawa — cerita menikah" loading="lazy" decoding="async"></div></div><div class="note fu" style="--d:.15s"><small>AGT 2027</small><h3>Menikah</h3><p>Kini kami siap menulis bab terakhir dari kisah ini — dan bab pertama dari selamanya. Kami tunggu kehadiranmu di hari bahagia kami.</p></div></div>
   </div>
 </section>
@@ -485,8 +484,8 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
   <div class="divider fu"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <p class="fu">Kehadiran dan doa Bapak/Ibu adalah hadiah terindah bagi kami. Namun bila berkenan memberi tanda kasih, kami sediakan pilihan berikut.</p>
   <div class="cframe fu" style="width:min(58vw,230px)"><div class="ph"><img src="cincin-detail.jpg" alt="Foto detail cincin emas di atas mawar putih" loading="lazy" decoding="async"></div></div>
-  <div class="bank-card fu"><div class="cap" style="color:var(--gold2)">BCA</div><h3 style="font-size:1.9rem;letter-spacing:.08em;color:var(--champ)">1234567890</h3><p style="color:#cfc2a6">a.n. Kirana Maheswari</p><button class="btn o cp" data-n="1234567890" type="button">Salin Nomor</button></div>
-  <div class="bank-card fu" style="--d:.15s"><div class="cap" style="color:var(--gold2)">Mandiri</div><h3 style="font-size:1.9rem;letter-spacing:.08em;color:var(--champ)">0987654321</h3><p style="color:#cfc2a6">a.n. Galih Pradana</p><button class="btn o cp" data-n="0987654321" type="button">Salin Nomor</button></div>
+  <div class="bank-card fu"><div class="cap" style="color:var(--gold2)">BCA</div><h3 style="font-size:1.9rem;letter-spacing:.08em;color:var(--champ)">1234567890</h3><p style="color:#cfc2a6">a.n. Wening Larasati</p><button class="btn o cp" data-n="1234567890" type="button">Salin Nomor</button></div>
+  <div class="bank-card fu" style="--d:.15s"><div class="cap" style="color:var(--gold2)">Mandiri</div><h3 style="font-size:1.9rem;letter-spacing:.08em;color:var(--champ)">0987654321</h3><p style="color:#cfc2a6">a.n. Pandu Atmojo</p><button class="btn o cp" data-n="0987654321" type="button">Salin Nomor</button></div>
   <div class="bank-card fu" style="--d:.3s"><div class="cap" style="color:var(--gold2)">Kirim Kado Fisik</div><p style="color:#cfc2a6">Jl. Kaliurang KM 9, Ngaglik, Sleman, Yogyakarta<br><span style="opacity:.7">Alamat contoh untuk keperluan demo</span></p></div>
 </section>
 
@@ -506,7 +505,7 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
     <small style="line-height:1.5;opacity:.72;font-family:var(--sans)">Mode demo: isian hanya tampil sementara di perangkat ini dan tidak dikirim.</small>
   </form>
   <div id="wishes">
-    <div class="w"><b>Keluarga Besar Sutrisno</b><p>Selamat untuk Kirana &amp; Galih. Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.</p></div>
+    <div class="w"><b>Keluarga Besar Widodo</b><p>Selamat untuk Wening &amp; Pandu. Semoga menjadi keluarga yang sakinah, mawaddah, warahmah.</p></div>
     <div class="w"><b>Rani Puspita</b><p>Akhirnya! Dari senja Malioboro sampai pelaminan. Sampai jumpa di Yogyakarta!</p></div>
   </div>
 </section>
@@ -515,21 +514,21 @@ input::placeholder,textarea::placeholder{color:rgba(243,229,195,.55)}
 <section class="sec d" id="tutup" style="justify-content:flex-start">
   <span class="streak s-tl"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#streak"/></svg></span>
   <span class="streak s-br"><svg viewBox="0 0 120 120" aria-hidden="true"><use href="#streak"/></svg></span>
-  <div class="mono fu"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>K·G</b></div>
+  <div class="mono fu"><span class="medal"><svg viewBox="0 0 100 100" aria-hidden="true"><use href="#orbm"/></svg></span><b>W·P</b></div>
   <div class="cframe oval fu close-photo"><div class="ph"><img src="pasangan-candid.jpg" alt="Foto penutup model pasangan pengantin tertawa bahagia" loading="lazy" decoding="async"></div></div>
   <div class="cap fu" style="color:var(--gold2)">Thank You</div>
   <h2 class="fu">Terima Kasih</h2>
   <div class="divider fu"><svg viewBox="0 0 48 48"><use href="#spk"/></svg></div>
   <p class="fu">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu. Atas kehadiran serta doanya, kami mengucapkan terima kasih yang sebesar-besarnya.</p>
   <p class="fu" style="font-size:.95rem">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
-  <h1 class="names fu" style="font-size:3.3rem">Kirana <span class="amp">&amp;</span> Galih</h1>
-  <h3 class="fu" style="color:var(--gold2)">#KiranaMenemukanGalih</h3>
+  <h1 class="names fu" style="font-size:3.3rem">Wening <span class="amp">&amp;</span> Pandu</h1>
+  <h3 class="fu" style="color:var(--gold2)">#WeningPanduBahagia</h3>
   <div class="cap fu" style="color:var(--gold2)">14 Agustus 2027 · Yogyakarta</div>
   <a class="btn fu" target="_blank" rel="noopener" href="https://wa.me/6285705030650?text=Halo%2C%20saya%20tertarik%20dengan%20template%20Sinema%20Senja.">Pesan tema ini</a>
 </section>
 </main>
 <footer class="credit">
-  <div class="brand">Kabar<i>Bahagia</i></div>
+  <img class="kb-logo" src="kabarbahagia-logo.png" alt="KabarBahagia" width="1781" height="402" loading="lazy" decoding="async">
   <p>Dibuat dengan ♥ oleh KabarBahagia</p>
   <small>Undangan Digital Elegan untuk Hari Bahagiamu</small>
 </footer>
@@ -589,7 +588,7 @@ function tick(){let x=Math.max(0,T-Date.now());const v=[Math.floor(x/864e5),Math
 ['cdD','cdH','cdM','cdS'].forEach((k,i)=>{const el=document.getElementById(k);if(el&&el.textContent!=v[i]){el.textContent=v[i];if(k==='cdS'){el.classList.remove('pulse');void el.offsetWidth;el.classList.add('pulse')}}})}
 tick();setInterval(tick,1000);
 const toast=m=>{const t=$('#t');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2200)};
-$('#cal').onclick=()=>window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Kirana+%26+Galih&dates=20270814T010000Z/20270814T030000Z&location=Pendopo+Kirana,+Sleman,+Yogyakarta','_blank');
+$('#cal').onclick=()=>window.open('https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Wening+%26+Pandu&dates=20270814T010000Z/20270814T030000Z&location=Pendopo+Senja,+Sleman,+Yogyakarta','_blank');
 $$('.cp').forEach(b=>b.onclick=()=>{try{navigator.clipboard.writeText(b.dataset.n)}catch(e){}toast('Nomor rekening disalin')});
 $('#videoPlay').onclick=()=>toast('Video prewedding tampil di sini pada undangan final');
 $$('.tg button').forEach(b=>b.onclick=()=>{$$('.tg button').forEach(x=>x.classList.remove('act'));b.classList.add('act')});
