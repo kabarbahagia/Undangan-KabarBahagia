@@ -305,8 +305,7 @@
     /* ---------- Credit di demo undangan ---------- */
     .demo-credit { background: var(--demo-deep, #6d4c1e); color: #fdf6e0; text-align: center; padding: 46px 26px 54px; }
     .demo-credit svg { width: 38px; height: 38px; margin: 0 auto 12px; fill: none; stroke: #ffd9a8; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-    .demo-credit .dc-brand { font: 600 2rem/1.1 var(--demo-font, var(--serif)); }
-    .demo-credit .dc-brand em { font-style: italic; font-weight: 500; }
+    .demo-credit .dc-logo { display: block; width: min(250px, 72%); height: auto; margin: 0 auto; }
     .demo-credit p { margin: 8px 0 0; font: 700 .68rem var(--sans); letter-spacing: .26em; text-transform: uppercase; opacity: .92; }
     .demo-credit .dc-heart { color: #ff9d8f; }
     /* ---------- Reveal halus ---------- */
@@ -875,7 +874,7 @@
             </div>
           </article>
           <article class="prod rv" data-cat="modern">
-            <div class="prod-media prod-live"><iframe src="assets/sinema-senja.html?v=4" title="Pratinjau mini Sinema Senja" tabindex="-1" loading="lazy"></iframe><span class="badge badge-new">Baru</span></div>
+            <div class="prod-media prod-live"><iframe src="assets/sinema-senja.html?v=5" title="Pratinjau mini Sinema Senja" tabindex="-1" loading="lazy"></iframe><span class="badge badge-new">Baru</span></div>
             <div class="prod-info">
               <h3 class="prod-name">Sinema Senja</h3>
               <p class="prod-desc">Sinematik malam ungu dan emas sampanye: foto layar penuh yang bergerak pelan, partikel cahaya melayang, medali orbit berputar, dan pita teks berjalan.</p>
@@ -1266,7 +1265,7 @@
         </section>
         <div class="demo-credit">
           <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 3l4.5 5.5L24 14l-4.5-5.5L24 3z"/><circle cx="18" cy="29" r="11"/><circle cx="31" cy="29" r="11"/></svg>
-          <div class="dc-brand">kabar<em>Bahagia</em></div>
+          <img class="dc-logo" src="assets/kabarbahagia-logo.png" alt="KabarBahagia" width="1781" height="402" loading="lazy" decoding="async">
           <p>Dibuat dengan <span class="dc-heart">♥</span> oleh KabarBahagia</p>
         </div>
       </div>
@@ -1290,7 +1289,7 @@
 
   <dialog id="senjaDialog" class="senja-dialog" aria-label="Demo lengkap Sinema Senja">
     <button class="demo-close senja-close" type="button" aria-label="Tutup demo Sinema Senja">×</button>
-    <iframe class="senja-demo-frame" data-src="assets/sinema-senja.html?v=4" title="Demo undangan Sinema Senja"></iframe>
+    <iframe class="senja-demo-frame" data-src="assets/sinema-senja.html?v=5" title="Demo undangan Sinema Senja"></iframe>
   </dialog>
 
 <script>
@@ -1329,7 +1328,7 @@
         bgmDemo.addEventListener('pause', function () { demoMusOn = false; demoMusBtn(); });
       }
       function stopFrameMusic(sel) { var f = document.querySelector(sel); if (f && f.contentWindow) { try { f.contentWindow.postMessage('kb-stop-music', '*'); } catch (e) {} } }
-      var FRAME_URLS = { '.paper-demo-frame': 'assets/paper-promise.html', '.heritage-demo-frame': 'assets/heritage.html', '.bali-demo-frame': 'assets/etnik-bali.html', '.senja-demo-frame': 'assets/sinema-senja.html?v=4' };
+      var FRAME_URLS = { '.paper-demo-frame': 'assets/paper-promise.html', '.heritage-demo-frame': 'assets/heritage.html', '.bali-demo-frame': 'assets/etnik-bali.html', '.senja-demo-frame': 'assets/sinema-senja.html?v=5' };
       function loadFrame(sel) { var f = document.querySelector(sel); if (f && !f.getAttribute('src')) { var u = f.getAttribute('data-src') || f.getAttribute('data-data-hatch-src') || FRAME_URLS[sel]; if (u) f.src = u; } }
       function openFrameDialog(dlg, sel) {
         loadFrame(sel);
@@ -1546,7 +1545,7 @@
         paper: { name: 'Surat Cinta', frame: 'assets/paper-promise.html', now: 'Rp99.000', was: 'Rp149.000' },
         heritage: { name: 'Heritage', img: 'assets/heritage.jpg', alt: 'Pratinjau besar tema Heritage', now: 'Rp99.000', was: 'Rp149.000' },
         bali: { name: 'Etnik Bali', frame: 'assets/etnik-bali.html', now: 'Rp99.000', was: 'Rp149.000' },
-        senja: { name: 'Sinema Senja', frame: 'assets/sinema-senja.html?v=4', now: 'Rp99.000', was: 'Rp149.000' }
+        senja: { name: 'Sinema Senja', frame: 'assets/sinema-senja.html?v=5', now: 'Rp99.000', was: 'Rp149.000' }
       };
       document.querySelectorAll('.pv-btn').forEach(function (b) {
         b.addEventListener('click', function () {
